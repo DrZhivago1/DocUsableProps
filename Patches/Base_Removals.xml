@@ -1,0 +1,93 @@
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!--Barrels-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_BarrelGreen" or defName="VFEPD_BarrelGrey" or defName="VFEPD_BarrelRed" or defName="VFEPD_BarrelYellow" or defName="VFEPD_BarrelBlue"]</xpath>
+            </li>
+            <!--Bookshelves-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WoodenBookshelf" or defName="VFEPD_SilverBookshelf" or defName="VFEPD_PlasteelBookshelf" or defName="VFEPD_SteelBookshelf"]</xpath>
+            </li>
+            <!--Bottle Rack-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WineRack"]</xpath>
+            </li>
+            <!--Carboard Boxes-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_CardboardBoxLarge" or defName="VFEPD_CardboardBoxSmall" or defName="VFEPD_PalletCardboard"]</xpath>
+            </li>
+            <!--Cargo Containers-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_ContainerGreen" or defName="VFEPD_ContainerGrey" or defName="VFEPD_ContainerRed" or defName="VFEPD_ContainerYellow" or defName="VFEPD_ContainerBlue"]</xpath>
+            </li>
+            <!--Concrete Bags-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_ConcreteBags"]</xpath>
+            </li>
+            <!--Hay Bales-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_HayBaleSmall" or defName="VFEPD_HayBaleMedium" or defName="VFEPD_HayBaleLarge"]</xpath>
+            </li>
+            <!--Lockers-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_Lockers"]</xpath>
+            </li>
+            <!--Medieval Armor Stands-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_ArmorStandEmpty" or defName="VFEPD_ArmorStandFull"]</xpath>
+            </li>
+            <!--Medieval Chests-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WoodenChest" or defName="VFEPD_WoodenChestLarge"]</xpath>
+            </li>
+            <!--Medieval Weapon Racks-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WeaponRackEmpty" or defName="VFEPD_WeaponRackSwords" or defName="VFEPD_WeaponRackSpears"]</xpath>
+            </li>
+            <!--Pallet-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_Pallet"]</xpath>
+            </li>
+            <!--Pallet Barrels-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_PalletBarrelGreen" or defName="VFEPD_PalletBarrelGrey" or defName="VFEPD_PalletBarrelRed" or defName="VFEPD_PalletBarrelYellow" or defName="VFEPD_PalletBarrelBlue"]</xpath>
+            </li>
+            <!--Pile of Bricks-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_BrickPile"]</xpath>
+            </li>
+            <!--Spacer Containers-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_SpacerContainer" or defName="VFEPD_SpacerContainerLarge" or defName="VFEPD_SpacerContainerStack" or defName="VFEPD_SpacerStorage"]</xpath>
+            </li>
+            <!--Tall Cabinet-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_SteelTallCabinet" or defName="VFEPD_PlasteelTallCabinet" or defName="VFEPD_SilverTallCabinet" or defName="VFEPD_WoodenTallCabinet"]</xpath>
+            </li>
+            <!--Vending Machines-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_SteelVendingMachine" or defName="VFEPD_PlasteelVendingMachine" or defName="VFEPD_SilverVendingMachine" or defName="VFEPD_WoodenVendingMachine"]</xpath>
+            </li>
+            <!--Wooden Wagon-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WoodenWagon"]</xpath>
+            </li>
+            <!--Warehouse Shelves-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WarehouseShelfEmpty" or defName="VFEPD_WarehouseShelfBoxes"]</xpath>
+            </li>
+            <!--Wooden Boxes-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_BoxLarge" or defName="VFEPD_BoxSmall" or defName="VFEPD_PalletBoxes"]</xpath>
+            </li>
+            <!--Wooden Logs-->
+            <li Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="VFEPD_WoodenLogs" or defName="VFEPD_WoodenLogsLarge"]</xpath>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

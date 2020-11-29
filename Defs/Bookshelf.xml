@@ -1,0 +1,58 @@
+<Defs>
+
+    <ThingDef ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_Bookshelf</defName>
+        <label>bookshelf</label>
+        <description>A bookshelf capable of holding a variety of books, tomes and publications.</description>
+        <graphicData>
+            <texPath>Things/Building/FurnitureProps/Bookshelf/Bookshelf</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(3.55,3.45)</drawSize>
+            <shadowData>
+                <volume>(0.30, 0.30, 0.40)</volume>
+            </shadowData>
+            <!--<color>(133,97,67)</color>-->
+        </graphicData>
+        <tickerType>Normal</tickerType>
+        <researchPrerequisites>
+            <li>FurnitureProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <blockWind>true</blockWind>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.5</fillPercent>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <repairEffect>ConstructMetal</repairEffect>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>6</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <!--<designationCategory>PropsandDecor</designationCategory>-->
+        <uiIconScale>1</uiIconScale>
+        <!--<designatorDropdown>FurnitureProps</designatorDropdown>-->
+        <building>
+            <isInert>true</isInert>
+        </building>
+        <costStuffCount>50</costStuffCount>
+        <stuffCategories>
+            <li>Stony</li>
+            <li>Metallic</li>
+            <li>Woody</li>
+        </stuffCategories>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>50</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

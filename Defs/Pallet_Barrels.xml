@@ -1,0 +1,87 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_PalletBarrelGreen" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_PalletBarrelGreen</defName>
+        <label>pallet with green barrels</label>
+        <description>Green metal barrels on a wooden pallet used for secure mass storage.</description>
+        <graphicData>
+            <texPath>Things/Building/IndustrialProps/PalletBarrels</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(3,3)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+            <color>(117,169,119)</color>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.6</fillPercent>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <repairEffect>ConstructMetal</repairEffect>
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>500</WorkToBuild>
+            <Mass>90</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(2,2)</size>
+        <costList>
+            <Steel>100</Steel>
+            <WoodLog>25</WoodLog>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>IndustrialProps</designatorDropdown>
+        <castEdgeShadows>True</castEdgeShadows>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>27</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>IndustrialProps</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+        <defName>DZ_VFEPD_PalletBarrelGrey</defName>
+        <label>pallet with grey barrels</label>
+        <description>Grey metal barrels on a wooden pallet used for secure mass storage.</description>
+        <graphicData>
+            <color>(123,123,123)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+        <defName>DZ_VFEPD_PalletBarrelRed</defName>
+        <label>pallet with red barrels</label>
+        <description>Red metal barrels on a wooden pallet used for secure mass storage.</description>
+        <graphicData>
+            <color>(168,124,120)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+        <defName>DZ_VFEPD_PalletBarrelYellow</defName>
+        <label>pallet with yellow barrels</label>
+        <description>Yellow metal barrels on a wooden pallet used for secure mass storage.</description>
+        <graphicData>
+            <color>(221,181,124)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+        <defName>DZ_VFEPD_PalletBarrelBlue</defName>
+        <label>pallet with blue barrels</label>
+        <description>Blue metal barrels on a wooden pallet used for secure mass storage.</description>
+        <graphicData>
+            <color>(127,138,167)</color>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

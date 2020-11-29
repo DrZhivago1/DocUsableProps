@@ -1,0 +1,29 @@
+<ModMetaData>
+
+	<name>DocVFEUsableProps</name>
+	<author>Dr_Zhivago</author>
+	<url>https://github.com/DrZhivago1/DocVFEUsableProps/releases</url>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>drzhivago.docvfeusableprops</packageId>
+	<description>
+This mod allows props from the "Vanilla Furniture Expanded - Props and Decor" mod to be usable storage, utilizing "LWM's Deep Storage".
+    
+	</description>
+
+	<modDependencies>
+		<li>
+			<packageId>VanillaExpanded.VFEPropsandDecor</packageId>
+			<displayName>Vanilla Furniture Expanded - Props and Decor</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2102143149</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>LWM.DeepStorage</packageId>
+			<displayName>LWM's Deep Storage</displayName>
+			<downloadUrl>https://github.com/lilwhitemouse/RimWorld-LWM.DeepStorage/releases</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1617282896</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+
+</ModMetaData>

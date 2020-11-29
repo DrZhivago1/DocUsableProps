@@ -1,0 +1,41 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_WineRack" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WineRack</defName>
+        <label>bottle rack</label>
+        <description>A civilized bottle storage rack.</description>
+        <graphicData>
+            <texPath>Things/Building/KitchenProps/WineRack/WineRack</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>KitchenProps</li>
+        </researchPrerequisites>
+        <rotatable>true</rotatable>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <WorkToBuild>50</WorkToBuild>
+            <Mass>15</Mass>
+            <Beauty>1</Beauty>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <WoodLog>15</WoodLog>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

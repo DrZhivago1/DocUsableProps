@@ -1,0 +1,90 @@
+<Defs>
+
+    <DesignatorDropdownGroupDef>
+        <defName>DZ_Storage_WeaponRacks</defName>
+    </DesignatorDropdownGroupDef>
+    
+    <ThingDef Name="DZ_VFEPD_WeaponRackEmpty" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WeaponRackEmpty</defName>
+        <label>weapon rack empty</label>
+        <description>A long weapon rack. It can store weapons. Items stored here can deteriorate</description>
+        <graphicData>
+            <texPath>Things/Building/MedievalProps/WeaponRackEmpty/WeaponRackEmpty</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <researchPrerequisites>
+            <li>MedievalProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <WorkToBuild>150</WorkToBuild>
+            <Mass>15</Mass>
+            <Beauty>15</Beauty>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <WoodLog>50</WoodLog>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>DZ_Storage_WeaponRacks</designatorDropdown>
+        <building>
+            <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeEachStack>10</additionalTimeEachStack>
+                <showContents>True</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="DZ_VFEPD_WeaponRackSwords" ParentName="DZ_VFEPD_WeaponRackEmpty">
+        <defName>DZ_VFEPD_WeaponRackSwords</defName>
+        <label>weapon rack swords</label>
+        <description>A long weapon rack. It can store weapons. Items stored here will not be visible but can deteriorate.</description>
+        <graphicData>
+            <texPath>Things/Building/MedievalProps/WeaponRackSwords/WeaponRackSwords</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <building>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>4</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeEachStack>10</additionalTimeEachStack>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_WeaponRackSwords">
+        <defName>DZ_VFEPD_WeaponRackSpears</defName>
+        <label>weapon rack spears</label>
+        <graphicData>
+            <texPath>Things/Building/MedievalProps/WeaponRackSpears/WeaponRackSpears</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,85 @@
+<Patch>
+
+    <!--RimFridge-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[KV] RimFridge</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VFEPD_Fridge"]</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_VFEPD_Fridge" ParentName="LWM_DeepRimFridge">
+                            <defName>DZ_VFEPD_Fridge</defName>
+                            <label>fridge</label>
+                            <description>A fridge cabinet. Can hold food and freeze it. Easier to build and use than a deep fridge.</description>
+                            <graphicData>
+                                <texPath>Things/Building/KitchenProps/Fridge/Fridge</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(3,3)</drawSize>
+                            </graphicData>
+                            <staticSunShadowHeight Inherit="False" />
+                            <defaultPlacingRot>South</defaultPlacingRot>
+                            <researchPrerequisites>
+                                <li>KitchenProps</li>
+                            </researchPrerequisites>
+                            <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+                            <castEdgeShadows>False</castEdgeShadows>
+                            <blockWind>False</blockWind>
+                            <statBases>
+                                <MaxHitPoints>150</MaxHitPoints>
+                                <WorkToBuild>500</WorkToBuild>
+                                <Mass>30</Mass>
+                                <Flammability>1.0</Flammability>
+                            </statBases>
+                            <size>(1,1)</size>
+                            <costList Inherit="False">
+                                <Steel>50</Steel>
+                                <ComponentIndustrial>2</ComponentIndustrial>
+                            </costList>
+                            <uiIconScale>0.5</uiIconScale>
+                            <comps Inherit="False">
+                                <li Class="CompProperties_Flickable"/>
+                                <li Class="CompProperties_Breakdownable"/>
+                                <li Class="CompProperties_Glower">
+                                    <glowRadius>2.5</glowRadius>
+                                    <glowColor>(89,188,255,0)</glowColor>
+                                </li>
+                                <li Class="RimFridge.CompProperties_Refrigerator">
+                                    <drinksBestCold>
+                                        <li>Beer</li>
+                                        <li>RC2_Ale</li>
+                                        <li>RC2_Cider</li>
+                                        <li>RC2_Grog</li>
+                                        <li>RC2_Stout</li>
+                                    </drinksBestCold>
+                                    <findAllRottableForFilters>true</findAllRottableForFilters>
+                                </li>
+                                <li Class="CompProperties_Power">
+                                    <compClass>CompPowerTrader</compClass>
+                                    <basePowerConsumption>120</basePowerConsumption>
+                                </li>
+                                <li Class='LWM.DeepStorage.Properties'>
+                                    <minNumberStacks>2</minNumberStacks>
+                                    <maxNumberStacks>5</maxNumberStacks>
+                                    <maxMassOfStoredItem>100</maxMassOfStoredItem>
+                                    <minTimeStoringTakes>25</minTimeStoringTakes>
+                                    <additionalTimeEachStack>10</additionalTimeEachStack>
+                                    <additionalTimeEachDef>10</additionalTimeEachDef>
+                                    <showContents>false</showContents>
+                                    <overlayType>None</overlayType>
+                                </li>
+                            </comps>
+                        </ThingDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

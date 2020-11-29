@@ -1,0 +1,112 @@
+<Patch>
+
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="WashingMachine"]/graphicData</xpath>
+                    <value>
+                        <graphicData>
+                            <texPath>Things/Building/FurnitureProps/WashingMachine/WashingMachine</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>(3,3)</drawSize>
+                        </graphicData>
+                        <uiIconScale>0.75</uiIconScale>
+                    </value>
+                </li>
+                <!--Water Tank for storage-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef ParentName="BasedWaterTower">
+                            <defName>DZ_VFEPD_WaterTank</defName>
+                            <label>water tank</label>
+                            <description>Stores water for use by plumbed fixtures. If the contained water becomes contaminated, the tank must be drained.</description>
+                            <graphicData>
+                                <texPath>Things/Building/IndustrialProps/WaterTank/WaterTank</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                                <drawSize>(1,1)</drawSize>
+                                <shadowData>
+                                    <volume>(0.55, 0.30, 0.40)</volume>
+                                </shadowData>
+                            </graphicData>
+                            <socialPropernessMatters>true</socialPropernessMatters>
+                            <size>(1,1)</size>
+                            <minifiedDef>MinifiedThing</minifiedDef>
+                            <tradeNeverStack>true</tradeNeverStack>
+                            <thingCategories>
+                                <li>BuildingsHygiene</li>
+                            </thingCategories>
+                            <costList>
+                                <Steel>20</Steel>
+                            </costList>
+                            <comps>
+                                <li Class="DubsBadHygiene.CompProperties_WaterStorage">
+                                    <WaterStorageCap>1500</WaterStorageCap>
+                                </li>
+                            </comps>
+                            <blockWind>false</blockWind>
+                            <canOverlapZones>true</canOverlapZones>
+                            <tradeability>Sellable</tradeability>
+                            <statBases>
+                                <Mass>2</Mass>
+                                <MaxHitPoints>75</MaxHitPoints>
+                                <WorkToBuild>1000</WorkToBuild>
+                            </statBases>
+                            <researchPrerequisites>
+                                <li>Plumbing</li>
+                            </researchPrerequisites>
+                        </ThingDef>
+                    </value>
+                </li>
+                <!--Water Dispenser as an alternative to Fountains-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_VFEPD_WaterDispenser" ParentName="DubsDirtyBasinBase">
+                            <defName>DZ_VFEPD_WaterDispenser</defName>
+                            <label>water dispenser</label>
+                            <description>A large, standing fresh water dispenser used for drinking.</description>
+                            <graphicData>
+                                <texPath>Things/Building/KitchenProps/WaterDispenser/WaterDispenser</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(2.5,2.5)</drawSize>
+                            </graphicData>
+                            <staticSunShadowHeight Inherit="false" />
+                            <defaultPlacingRot>South</defaultPlacingRot>
+                            <hasInteractionCell>False</hasInteractionCell>
+                            <thingCategories Inherit="false">
+                                <li>BuildingsHygiene</li>
+                            </thingCategories>
+                            <researchPrerequisites>
+                                <li>KitchenProps</li>
+                            </researchPrerequisites>
+                            <fillPercent>0.15</fillPercent>
+                            <size>(1,1)</size>
+                            <costList>
+                                <Steel>20</Steel>
+                            </costList>
+                            <uiIconScale>0.7</uiIconScale>
+                        </ThingDef>
+                    </value>
+                </li>
+                <!-- New  texture mask-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="WashBucket"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>Water_Bucket/DZ_BucketWater</texPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VFEPD_BucketWater" or defName="VFEPD_WashingMachine" or defName="VFEPD_WaterDispenser" or defName="VFEPD_WaterTank"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

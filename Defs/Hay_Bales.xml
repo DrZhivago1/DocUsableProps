@@ -1,0 +1,116 @@
+<Defs>
+
+    <DesignatorDropdownGroupDef>
+        <defName>DZ_Storage_HayBales</defName>
+    </DesignatorDropdownGroupDef>
+
+    <ThingDef Name="DZ_VFEPD_HayBaleSmall" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_HayBaleSmall</defName>
+        <label>small hay bale</label>
+        <description>A small block of hay.</description>
+        <graphicData>
+            <texPath>Things/Building/FarmProps/HayBaleSmall/HayBaleSmall</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <researchPrerequisites>
+            <li>FarmProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.05</fillPercent>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Hay>20</Hay>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>DZ_Storage_HayBales</designatorDropdown>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>3</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeStackSize>8</additionalTimeStackSize>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_HayBaleSmall">
+        <defName>DZ_VFEPD_HayBaleMedium</defName>
+        <label>medium hay bale</label>
+        <description>A medium block of hay.</description>
+        <graphicData>
+            <texPath>Things/Building/FarmProps/HayBaleMedium/HayBaleMedium</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <fillPercent>0.1</fillPercent>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>300</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <costList>
+            <Hay>50</Hay>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeStackSize>8</additionalTimeStackSize>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_HayBaleSmall">
+        <defName>DZ_VFEPD_HayBaleLarge</defName>
+        <label>large hay bale</label>
+        <description>A large roll of hay.</description>
+        <graphicData>
+            <texPath>Things/Building/FarmProps/HayBaleLarge/HayBaleLarge</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Mass>250</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(2,2)</size>
+        <costList>
+            <Hay>250</Hay>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>3</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeStackSize>8</additionalTimeStackSize>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

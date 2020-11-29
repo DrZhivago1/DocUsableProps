@@ -1,0 +1,52 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_Lockers" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_Lockers</defName>
+        <label>lockers</label>
+        <description>A metal locker unit, can store heavier clothing than a clothing rack.</description>
+        <graphicData>
+            <texPath>Things/Building/IndustrialProps/Lockers/Lockers</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2.5,2.5)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>FurnitureProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>0.1</fillPercent>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>10</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>60</costStuffCount>
+        <uiIconScale>0.5</uiIconScale>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>10</maxNumberStacks>
+                <minNumberStacks>4</minNumberStacks>
+                <minTimeStoringTakes>90</minTimeStoringTakes>
+                <additionalTimeEachStack>10</additionalTimeEachStack>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+    
+</Defs>

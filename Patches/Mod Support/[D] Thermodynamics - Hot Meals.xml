@@ -1,0 +1,132 @@
+<Patch>
+
+    <!--Thermodynamics-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[D] Thermodynamics - Hot Meals</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Culinary_HotMeals</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DMicrowave"]/graphicData</xpath>
+                    <value>
+                        <graphicData>
+                            <texPath>Things/Building/KitchenProps/Microwave/Microwave</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>(1.5,1.5)</drawSize>
+                        </graphicData>
+                        <uiIconScale>0.75</uiIconScale>
+                        <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAttributeSet">
+                    <xpath>/Defs/ThingDef[defName="DMicrowave"]</xpath>
+                    <attribute>Name</attribute>
+                    <value>DMicrowave</value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef ParentName="DMicrowave">
+                            <defName>DZ_VFEPD_Cooker</defName>
+                            <label>cooker</label>
+                            <description>A cooker unit for heating up food.</description>
+                            <graphicData>
+                                <texPath>Things/Building/KitchenProps/Cooker/Cooker</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(1.1,1.1)</drawSize>
+                            </graphicData>
+                            <uiIconScale>0.75</uiIconScale>
+                            <fillPercent>0.3</fillPercent>
+                            <costList>
+                                <Steel>75</Steel>
+                                <ComponentIndustrial>2</ComponentIndustrial>
+                            </costList>
+                            <size>1,1</size>
+                            <statBases>
+                                <WorkToBuild>1000</WorkToBuild>
+                                <MaxHitPoints>100</MaxHitPoints>
+                                <Mass>15</Mass>
+                                <Flammability>1.0</Flammability>
+                                <WorkTableWorkSpeedFactor>2</WorkTableWorkSpeedFactor>
+                            </statBases>
+                            <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                            <researchPrerequisites>
+                                <li>Electricity</li>
+                            </researchPrerequisites>
+                        </ThingDef>
+
+                        <ThingDef ParentName="DMicrowave">
+                            <defName>DZ_VFEPD_Oven</defName>
+                            <label>oven</label>
+                            <description>A large oven for heating up food.</description>
+                            <graphicData>
+                                <texPath>Things/Building/KitchenProps/Oven/Oven</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(1.5,1.5)</drawSize>
+                            </graphicData>
+                            <uiIconScale>0.75</uiIconScale>
+                            <costList>
+                                <Steel>75</Steel>
+                                <ComponentIndustrial>2</ComponentIndustrial>
+                            </costList>
+                            <size>1,1</size>
+                            <statBases>
+                                <WorkToBuild>1000</WorkToBuild>
+                                <MaxHitPoints>100</MaxHitPoints>
+                                <Mass>15</Mass>
+                                <Flammability>1.0</Flammability>
+                                <WorkTableWorkSpeedFactor>2</WorkTableWorkSpeedFactor>
+                            </statBases>
+                            <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                            <researchPrerequisites>
+                                <li>Electricity</li>
+                            </researchPrerequisites>
+                        </ThingDef>
+
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VFEPD_Microwave" or defName="VFEPD_Oven" or defName="VFEPD_Cooker"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>DocWorld</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_Cooker" or defName="DZ_VFEPD_Oven"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="DZ_VFEPD_Cooker" or defName="DZ_VFEPD_Oven"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Culinary</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DZ_VFEPD_Cooker" or defName="DZ_VFEPD_Oven"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Culinary</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>-->
+
+
+</Patch>

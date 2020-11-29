@@ -1,0 +1,53 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_VendingMachine" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_VendingMachine</defName>
+        <label>vending machine</label>
+        <description>A vending machine. You can store food and drugs here. Your pawns refuse to pay for using it, though.</description>
+        <graphicData>
+            <texPath>Things/Building/FurnitureProps/VendingMachine/VendingMachine</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(3.5,3.5)</drawSize>
+            <shadowData>
+                <volume>(0.30, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>FurnitureProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <WorkToBuild>120</WorkToBuild>
+            <Mass>10</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>50</costStuffCount>
+        <uiIconScale>0.5</uiIconScale>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>10</maxNumberStacks>
+                <minTimeStoringTakes>25</minTimeStoringTakes>
+                <additionalTimeEachStack>5</additionalTimeEachStack>
+                <additionalTimeEachDef>2</additionalTimeEachDef>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

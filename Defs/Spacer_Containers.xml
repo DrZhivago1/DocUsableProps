@@ -1,0 +1,161 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_SpacerContainer" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_SpacerContainer</defName>
+        <label>spacer container</label>
+        <description>A medium sized, triple sealed, password protected box.</description>
+        <thingClass>Building_Storage</thingClass>
+        <graphicData>
+            <texPath>Things/Building/SpacerProps/SpacerContainer/SpacerContainer</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SpacerProps</li>
+        </researchPrerequisites>
+        <fillPercent>0.2</fillPercent>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>500</WorkToBuild>
+            <Mass>50</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Uranium>5</Uranium>
+            <Plasteel>15</Plasteel>
+            <Silver>50</Silver>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>SpacerProps</designatorDropdown>
+        <building>
+            <isInert>true</isInert>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeEachStack>150</additionalTimeEachStack>
+                <additionalTimeStackSize>10</additionalTimeStackSize>
+                <maxMassOfStoredItem>75</maxMassOfStoredItem>
+                <maxTotalMass>250</maxTotalMass>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="DZ_VFEPD_SpacerContainerLarge" ParentName="DZ_VFEPD_SpacerContainer">
+        <defName>DZ_VFEPD_SpacerContainerLarge</defName>
+        <label>spacer container large</label>
+        <description>A large sized, triple sealed, password protected box.</description>
+        <graphicData>
+            <texPath>Things/Building/SpacerProps/SpacerContainerLarge/SpacerContainerLarge</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <Uranium>5</Uranium>
+            <Plasteel>30</Plasteel>
+            <Silver>100</Silver>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeEachStack>150</additionalTimeEachStack>
+                <additionalTimeStackSize>10</additionalTimeStackSize>
+                <maxMassOfStoredItem>100</maxMassOfStoredItem>
+                <maxTotalMass>500</maxTotalMass>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="DZ_VFEPD_SpacerContainerStack" ParentName="DZ_VFEPD_SpacerContainer">
+        <defName>DZ_VFEPD_SpacerContainerStack</defName>
+        <label>spacer container stack</label>
+        <description>A large stack of different sized, triple sealed, password protected boxes.</description>
+        <graphicData>
+            <texPath>Things/Building/SpacerProps/SpacerContainerStack</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <passability>PassThroughOnly</passability>
+        <rotatable>false</rotatable>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>200</Mass>
+        </statBases>
+        <size>(2,2)</size>
+        <costList>
+            <Uranium>15</Uranium>
+            <Plasteel>90</Plasteel>
+            <Silver>300</Silver>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>10</maxNumberStacks>
+                <minTimeStoringTakes>150</minTimeStoringTakes>
+                <additionalTimeEachStack>150</additionalTimeEachStack>
+                <additionalTimeStackSize>10</additionalTimeStackSize>
+                <maxMassOfStoredItem Inherit="false" />
+                <maxTotalMass Inherit="false" />
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="DZ_VFEPD_SpacerStorage" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_SpacerStorage</defName>
+        <label>advanced storage device</label>
+        <description>A large, multi-chamber advanced storage device.</description>
+        <graphicData>
+            <texPath>Things/Building/SpacerProps/SpacerStorage/SpacerStorage</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>SpacerProps</li>
+        </researchPrerequisites>
+        <fillPercent>0.35</fillPercent>
+        <castEdgeShadows>True</castEdgeShadows>
+        <blockWind>true</blockWind>
+        <passability>PassThroughOnly</passability>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <repairEffect>ConstructMetal</repairEffect>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Mass>300</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(3,1)</size>
+        <costList>
+            <Uranium>30</Uranium>
+            <Plasteel>180</Plasteel>
+            <Silver>600</Silver>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>SpacerProps</designatorDropdown>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>10</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

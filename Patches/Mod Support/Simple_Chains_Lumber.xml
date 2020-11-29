@@ -1,0 +1,23 @@
+<Patch>
+
+    <!--Simple Chains: Lumber-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Simple Chains: Lumber</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WoodenLogs" or defName="DZ_VFEPD_WoodenLogsLarge"]/costList</xpath>
+                    <value>
+                        <costList>
+                            <Owl_WoodLog>50</Owl_WoodLog>
+                        </costList>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,47 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_ConcreteBags" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_ConcreteBags</defName>
+        <label>storage bags</label>
+        <description>A stack of storage bags. Can hold loose materials. Items stored here will not deteriorate.</description>
+        <graphicData>
+            <texPath>Things/Building/IndustrialProps/ConcreteBags/ConcreteBags</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <rotatable>false</rotatable>
+        <researchPrerequisites>
+            <li>IndustrialProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <WorkToBuild>130</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <WoodLog>10</WoodLog>
+            <Cloth>60</Cloth>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>8</maxNumberStacks>
+                <minTimeStoringTakes>150</minTimeStoringTakes>
+                <additionalTimeEachStack>10</additionalTimeEachStack>
+                <additionalTimeEachDef>50</additionalTimeEachDef>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

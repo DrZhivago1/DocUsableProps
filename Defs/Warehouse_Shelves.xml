@@ -1,0 +1,103 @@
+<Defs>
+
+    <!--Could be made stuffable, but needs better texture-->
+    <DesignatorDropdownGroupDef>
+        <defName>DZ_Storage_WarehouseShelf</defName>
+    </DesignatorDropdownGroupDef>
+
+    <ThingDef Name="DZ_VFEPD_WarehouseShelfEmpty" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WarehouseShelfEmpty</defName>
+        <label>warehouse shelf</label>
+        <description>An impassable warehouse shelf. Can store a lot of things, so long as they are not loose.</description>
+        <graphicData>
+            <texPath>Things/Building/FurnitureProps/WarehouseShelfEmpty/WarehouseShelfEmpty</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>IndustrialProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>30</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <Steel>120</Steel>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <building>
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
+        </building>
+        <designatorDropdown>DZ_Storage_WarehouseShelf</designatorDropdown>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>300</minTimeStoringTakes>
+                <additionalTimeEachStack>110</additionalTimeEachStack>
+                <additionalTimeEachDef>20</additionalTimeEachDef>
+                <showContents>true</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="DZ_VFEPD_WarehouseShelfBoxes" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WarehouseShelfBoxes</defName>
+        <label>warehouse shelf with boxes</label>
+        <description>An impassable warehouse shelf. Can store a lot of things. It can take a while to take and store items from such a tall structure. Items here will not deteriorate, even if outside.</description>
+        <graphicData>
+            <texPath>Things/Building/FurnitureProps/WarehouseShelfBoxes/WarehouseShelfBoxes</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <researchPrerequisites>
+            <li>IndustrialProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToBuild>1500</WorkToBuild>
+            <Mass>35</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <Steel>120</Steel>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+        </building>
+        <designatorDropdown>DZ_Storage_WarehouseShelf</designatorDropdown>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>300</minTimeStoringTakes>
+                <additionalTimeEachStack>110</additionalTimeEachStack>
+                <additionalTimeEachDef>10</additionalTimeEachDef>
+                <maxMassOfStoredItem>90</maxMassOfStoredItem>
+                <maxTotalMass>320</maxTotalMass>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

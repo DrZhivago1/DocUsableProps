@@ -1,0 +1,54 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_TallCabinet" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_TallCabinet</defName>
+        <label>tall cabbinet</label>
+        <description>A tall cabinet. Can hold food, drugs and medicine. Better than a food basket.</description>
+        <graphicData>
+            <texPath>Things/Building/FurnitureProps/TallCabinet/TallCabinet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3.55,3.45)</drawSize>
+            <shadowData>
+                <volume>(0.30, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <researchPrerequisites>
+            <li>FurnitureProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <castEdgeShadows>False</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>0.1</fillPercent>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>6</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>80</costStuffCount>
+        <uiIconScale>0.5</uiIconScale>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeEachStack>20</additionalTimeEachStack>
+                <additionalTimeEachDef>20</additionalTimeEachDef>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

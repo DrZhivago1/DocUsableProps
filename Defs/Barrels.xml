@@ -1,0 +1,83 @@
+<Defs>
+
+    <ThingDef Name="DZ_VFEPD_BarrelGreen" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_BarrelGreen</defName>
+        <label>green barrel</label>
+        <description>A green metal barrel used for secure mass storage.</description>
+        <graphicData>
+            <texPath>Things/Building/IndustrialProps/Barrel/Barrel</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+            <color>(117,169,119)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.2</fillPercent>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <repairEffect>ConstructMetal</repairEffect>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>10</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>15</Steel>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>IndustrialProps</designatorDropdown>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>3</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>IndustrialProps</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+        <defName>DZ_VFEPD_BarrelGrey</defName>
+        <label>grey barrel</label>
+        <description>A grey metal barrel used for secure mass storage.</description>
+        <graphicData>
+            <color>(123,123,123)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+        <defName>DZ_VFEPD_BarrelRed</defName>
+        <label>red barrel</label>
+        <description>A red metal barrel used for secure mass storage.</description>
+        <graphicData>
+            <color>(168,124,120)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+        <defName>DZ_VFEPD_BarrelYellow</defName>
+        <label>yellow barrel</label>
+        <description>A yellow metal barrel used for secure mass storage.</description>
+        <graphicData>
+            <color>(221,181,124)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+        <defName>DZ_VFEPD_BarrelBlue</defName>
+        <label>blue barrel</label>
+        <description>A blue metal barrel used for secure mass storage.</description>
+        <graphicData>
+            <color>(127,138,167)</color>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

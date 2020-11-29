@@ -1,0 +1,87 @@
+<Defs>
+
+    <DesignatorDropdownGroupDef>
+        <defName>DZ_Storage_WoodenLogs</defName>
+    </DesignatorDropdownGroupDef>
+
+    <ThingDef Name="DZ_VFEPD_WoodenLogs" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WoodenLogs</defName>
+        <label>wooden logs</label>
+        <description>A small, passable stack of wooden logs.</description>
+        <graphicData>
+            <texPath>Things/Building/FarmProps/WoodenLogs/WoodenLogs</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1.5,1.5)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <researchPrerequisites>
+            <li>FarmProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.4</fillPercent>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>DZ_Storage_WoodenLogs</designatorDropdown>
+        <building>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeStackSize>4</additionalTimeStackSize>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_WoodenLogs">
+        <defName>DZ_VFEPD_WoodenLogsLarge</defName>
+        <label>large wooden logs</label>
+        <description>A large, impassable stack of wooden logs.</description>
+        <graphicData>
+            <texPath>Things/Building/FarmProps/WoodenLogsLarge/WoodenLogsLarge</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <fillPercent>0.1</fillPercent>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>300</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(3,1)</size>
+        <costList>
+            <WoodLog>50</WoodLog>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>5</maxNumberStacks>
+                <minTimeStoringTakes>100</minTimeStoringTakes>
+                <additionalTimeStackSize>4</additionalTimeStackSize>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,89 @@
+<Defs>
+
+    <DesignatorDropdownGroupDef>
+        <defName>DZ_Storage_Chests</defName>
+    </DesignatorDropdownGroupDef>
+    
+    <ThingDef Name="DZ_VFEPD_WoodenChest" ParentName="LWM_DeepStorage">
+        <defName>DZ_VFEPD_WoodenChest</defName>
+        <label>wooden chest</label>
+        <description>A medium size wooden chest for storing miscellaneous items. Items stored in this will not deteriorate, even if outside.</description>
+        <graphicData>
+            <texPath>Things/Building/MedievalProps/Chest/Chest</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <researchPrerequisites>
+            <li>MedievalProps</li>
+        </researchPrerequisites>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <WorkToBuild>150</WorkToBuild>
+            <Mass>15</Mass>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <WoodLog>40</WoodLog>
+        </costList>
+        <uiIconScale>1</uiIconScale>
+        <designatorDropdown>DZ_Storage_Chests</designatorDropdown>
+        <building>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+        </building>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>3</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeEachStack>75</additionalTimeEachStack>
+                <maxTotalMass>45</maxTotalMass>                <!--About a medium sized body-->
+                <additionalTimeEachDef>20</additionalTimeEachDef>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="DZ_VFEPD_WoodenChest">
+        <defName>DZ_VFEPD_WoodenChestLarge</defName>
+        <label>large wooden box</label>
+        <description>A large size wooden chest for storing miscellaneous items. Items stored in this will not deteriorate, even if outside.</description>
+        <graphicData>
+            <texPath>Things/Building/MedievalProps/ChestLarge/ChestLarge</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <shadowData>
+                <volume>(0.55, 0.30, 0.40)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>40</MaxHitPoints>
+            <WorkToBuild>100</WorkToBuild>
+            <Mass>8</Mass>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <WoodLog>60</WoodLog>
+        </costList>
+        <comps>
+            <li Class="LWM.DeepStorage.Properties">
+                <maxNumberStacks>6</maxNumberStacks>
+                <minTimeStoringTakes>50</minTimeStoringTakes>
+                <additionalTimeEachStack>75</additionalTimeEachStack>
+                <additionalTimeEachDef>20</additionalTimeEachDef>
+                <showContents>false</showContents>
+                <overlayType>None</overlayType>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>
