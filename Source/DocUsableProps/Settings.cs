@@ -7,7 +7,7 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 
-namespace DocVFEUsableProps
+namespace DocUsableProps
 {
     // Made by Fluffy and ISOREX for Dr_Zhivago's DocWorld, edited by Dr_Zhivago
     public class PatchDisablerMod : Mod
@@ -58,7 +58,7 @@ namespace DocVFEUsableProps
         // title of the settings tab for our mod
         public override string SettingsCategory()
         {
-            return "DocVFEUsableProps";
+            return "DocUsableProps";
         }
     }
 

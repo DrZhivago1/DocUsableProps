@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DocVFEUsableProps")]
+[assembly: AssemblyTitle("DocUsableProps")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DocVFEUsableProps")]
+[assembly: AssemblyProduct("DocUsableProps")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("212f19c2-6319-46bd-9071-48de9266fde5")]
+[assembly: Guid("d262e83a-6561-459c-8119-b42ee8d9f7e4")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,12 +1,12 @@
 <ModMetaData>
 
-	<name>DocVFEUsableProps</name>
+	<name>DocUsableProps</name>
 	<author>Dr_Zhivago</author>
 	<url>https://github.com/DrZhivago1/DocVFEUsableProps/releases</url>
 	<supportedVersions>
 		<li>1.2</li>
 	</supportedVersions>
-	<packageId>drzhivago.docvfeusableprops</packageId>
+	<packageId>drzhivago.docusableprops</packageId>
 	<description>
 This mod allows props from the "Vanilla Furniture Expanded - Props and Decor" mod to be usable storage, utilizing "LWM's Deep Storage".
     

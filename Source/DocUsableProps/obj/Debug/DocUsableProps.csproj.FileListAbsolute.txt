@@ -1,0 +1,5 @@
+D:\Games\RimWorld\RimWorld_ModStuff\Projects\Visual Studio\DocUsableProps\DocUsableProps\bin\Debug\DocUsableProps.dll
+D:\Games\RimWorld\RimWorld_ModStuff\Projects\Visual Studio\DocUsableProps\DocUsableProps\bin\Debug\DocUsableProps.pdb
+D:\Games\RimWorld\RimWorld_ModStuff\Projects\Visual Studio\DocUsableProps\DocUsableProps\obj\Debug\DocUsableProps.csprojAssemblyReference.cache
+D:\Games\RimWorld\RimWorld_ModStuff\Projects\Visual Studio\DocUsableProps\DocUsableProps\obj\Debug\DocUsableProps.dll
+D:\Games\RimWorld\RimWorld_ModStuff\Projects\Visual Studio\DocUsableProps\DocUsableProps\obj\Debug\DocUsableProps.pdb
