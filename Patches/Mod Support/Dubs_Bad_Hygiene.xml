@@ -95,15 +95,15 @@
                         </ThingDef>
                     </value>
                 </li>
-                <!-- New  texture mask-->
+                <!-- New  texture mask
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef[defName="WashBucket"]/graphicData/texPath</xpath>
                     <value>
                         <texPath>Water_Bucket/DZ_BucketWater</texPath>
                     </value>
-                </li>
+                </li>-->
                 <li Class="PatchOperationRemove">
-                    <xpath>/Defs/ThingDef[defName="VFEPD_BucketWater" or defName="VFEPD_WashingMachine" or defName="VFEPD_WaterDispenser" or defName="VFEPD_WaterTank"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="VFEPD_WashingMachine" or defName="VFEPD_WaterDispenser" or defName="VFEPD_WaterTank"]</xpath>
                 </li>
             </operations>
         </match>
